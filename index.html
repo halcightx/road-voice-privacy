@@ -88,7 +88,7 @@
   <main>
     <header>
       <h1>Road Voice Privacy Policy</h1>
-      <p class="meta">Effective and last updated: August 5, 2026</p>
+      <p class="meta">Effective and last updated: August 12, 2026</p>
       <p class="intro">Road Voice is a voice assistant for Android and Android Auto. This policy explains what data the app processes, why it is needed, and the choices available to you.</p>
       <nav aria-label="Languages">
         <a href="#english">English</a>
@@ -106,9 +106,9 @@
       <h3>Data we process</h3>
       <ul>
         <li><strong>Voice and conversation data.</strong> When you start a voice session, microphone audio, conversation content, tool requests, tool results, and web-search queries are transmitted to the OpenAI API to provide realtime responses and requested features.</li>
-        <li><strong>Optional location data.</strong> Road Voice requests foreground location permission only. If you grant permission and ask for a location-based feature, the app may process your latitude, longitude, accuracy, and observation time. These details are sent to OpenAI to answer the tool request. For current-location weather, coordinates are also sent to Open-Meteo. For named-place weather, the place name is sent to Open-Meteo for geocoding.</li>
+        <li><strong>Optional location and place-search data.</strong> Road Voice requests foreground location permission only. If you grant permission and ask for a location-based feature, the app may process your latitude, longitude, accuracy, and observation time. These details are sent to OpenAI to answer the tool request. For current-location weather, coordinates are also sent to Open-Meteo. For named-place weather, the place name is sent to Open-Meteo for geocoding. A place-search query, optional current-location bias, and returned place candidates are processed by Google Places when you ask to find a destination.</li>
         <li><strong>OpenAI API key.</strong> The key you enter is encrypted on your device with Android Keystore-backed AES-GCM storage and is sent to OpenAI only to authenticate API requests. The developer does not receive or store your key.</li>
-        <li><strong>Local settings and artifacts.</strong> Interface language, voice selection, and generated Markdown conversation summaries are stored locally on your device. A Markdown file leaves the app only when you explicitly share it through Android's share interface.</li>
+        <li><strong>Local settings and artifacts.</strong> Interface language, voice and noise-reduction selections, and generated Markdown conversation summaries are stored locally on your device. After each Android Auto conversation, Road Voice also creates a local Markdown diagnostic report containing the selected noise-reduction mode, session and VAD event timing, and aggregate audio-signal measurements such as byte count, chunk interval, RMS, peak, and clipping rate. A diagnostic report does not contain raw audio, a transcript, an API key, tool arguments, or model responses. A Markdown file leaves the app only when you explicitly share it through Android's share interface.</li>
         <li><strong>Technical request data.</strong> Service providers may automatically process network information such as an IP address and request metadata under their own policies.</li>
       </ul>
 
@@ -119,6 +119,7 @@
       <ul>
         <li><strong>OpenAI.</strong> Provides realtime voice responses and web search. OpenAI states that API data is not used to train its models unless the API customer opts in. OpenAI may retain abuse-monitoring logs containing customer content for up to 30 days by default. Road Voice sends Responses API requests with storage disabled. See <a href="https://openai.com/policies/privacy-policy/">OpenAI's Privacy Policy</a> and <a href="https://developers.openai.com/api/docs/guides/your-data">API data controls</a>.</li>
         <li><strong>Open-Meteo.</strong> Provides weather and place-geocoding data. Its free API logs may include IP addresses and geographic coordinates for troubleshooting and states that individual logs are deleted after 90 days. See <a href="https://open-meteo.com/en/terms">Open-Meteo Terms &amp; Privacy</a>.</li>
+        <li><strong>Google Places.</strong> Provides destination search and place candidates when requested. See <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>.</li>
         <li><strong>Google Play services and Android.</strong> Supply device location and operating-system features. See <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>.</li>
       </ul>
 
@@ -147,9 +148,9 @@
       <h3>我们处理的数据</h3>
       <ul>
         <li><strong>语音与对话数据。</strong>当你开始语音会话时，麦克风音频、对话内容、工具请求、工具结果和网页搜索请求会发送至 OpenAI API，用于提供实时回复和你请求的功能。</li>
-        <li><strong>可选的位置信息。</strong>Road Voice 只申请前台定位权限。当你授权并主动请求位置相关功能时，App 可能处理纬度、经度、精度和定位时间，并将这些信息发送给 OpenAI 以完成工具请求。查询当前位置天气时，坐标也会发送给 Open-Meteo；查询指定地点天气时，地点名称会发送给 Open-Meteo 进行地理编码。</li>
+        <li><strong>可选的位置与地点搜索信息。</strong>Road Voice 只申请前台定位权限。当你授权并主动请求位置相关功能时，App 可能处理纬度、经度、精度和定位时间，并将这些信息发送给 OpenAI 以完成工具请求。查询当前位置天气时，坐标也会发送给 Open-Meteo；查询指定地点天气时，地点名称会发送给 Open-Meteo 进行地理编码。当你要求查找目的地时，地点搜索词、可选的当前位置偏向和返回的地点候选会由 Google Places 处理。</li>
         <li><strong>OpenAI API Key。</strong>你输入的 Key 使用 Android Keystore 支持的 AES-GCM 加密保存在设备上，仅为验证 API 请求而发送给 OpenAI。开发者不会收到或保存你的 Key。</li>
-        <li><strong>本地设置与文件。</strong>界面语言、声音选择和生成的 Markdown 对话摘要只保存在设备本地。只有当你通过 Android 分享界面主动分享时，Markdown 文件才会离开 App。</li>
+        <li><strong>本地设置与文件。</strong>界面语言、声音与降噪选择，以及生成的 Markdown 对话摘要只保存在设备本地。每次 Android Auto 对话结束后，Road Voice 还会创建一份本地 Markdown 诊断报告，记录所选降噪模式、会话与 VAD 事件时间，以及字节数、音频块间隔、RMS、峰值和削波率等聚合音频信号指标。诊断报告不包含原始音频、逐字稿、API Key、工具参数或模型回复。只有当你通过 Android 分享界面主动分享时，Markdown 文件才会离开 App。</li>
         <li><strong>技术请求数据。</strong>服务提供方可能根据其政策自动处理 IP 地址、请求元数据等网络信息。</li>
       </ul>
 
@@ -160,6 +161,7 @@
       <ul>
         <li><strong>OpenAI。</strong>提供实时语音回复和网页搜索。OpenAI 说明，除非 API 客户主动选择加入，否则 API 数据不会用于训练其模型；默认情况下，可能包含客户内容的滥用监测日志最多保留 30 天。Road Voice 调用 Responses API 时会关闭存储。请参阅 <a href="https://openai.com/policies/privacy-policy/">OpenAI 隐私政策</a>和 <a href="https://developers.openai.com/api/docs/guides/your-data">API 数据控制说明</a>。</li>
         <li><strong>Open-Meteo。</strong>提供天气与地点地理编码。其免费 API 的故障排查日志可能包含 IP 地址和地理坐标，并说明会在 90 天后删除单条日志。请参阅 <a href="https://open-meteo.com/en/terms">Open-Meteo 条款与隐私</a>。</li>
+        <li><strong>Google Places。</strong>在你提出请求时提供目的地搜索和地点候选。请参阅 <a href="https://policies.google.com/privacy">Google 隐私政策</a>。</li>
         <li><strong>Google Play 服务与 Android。</strong>提供设备定位和操作系统功能。请参阅 <a href="https://policies.google.com/privacy">Google 隐私政策</a>。</li>
       </ul>
 
@@ -188,9 +190,9 @@
       <h3>処理するデータ</h3>
       <ul>
         <li><strong>音声と会話データ。</strong>音声セッションを開始すると、マイク音声、会話内容、ツールのリクエストと結果、ウェブ検索クエリが OpenAI API に送信され、リアルタイム応答と要求された機能の提供に使用されます。</li>
-        <li><strong>任意の位置情報。</strong>Road Voice が要求するのはフォアグラウンド位置情報の権限のみです。許可したうえで位置情報を使う機能を要求すると、緯度、経度、精度、取得時刻を処理し、ツール要求への回答のため OpenAI に送信する場合があります。現在地の天気では座標を Open-Meteo にも送信し、地名を指定した天気では地理検索のため地名を Open-Meteo に送信します。</li>
+        <li><strong>任意の位置情報と場所検索データ。</strong>Road Voice が要求するのはフォアグラウンド位置情報の権限のみです。許可したうえで位置情報を使う機能を要求すると、緯度、経度、精度、取得時刻を処理し、ツール要求への回答のため OpenAI に送信する場合があります。現在地の天気では座標を Open-Meteo にも送信し、地名を指定した天気では地理検索のため地名を Open-Meteo に送信します。目的地の検索を依頼した場合、検索語、任意の現在地バイアス、返された場所候補が Google Places によって処理されます。</li>
         <li><strong>OpenAI API キー。</strong>入力したキーは Android Keystore によって保護された AES-GCM で端末内に暗号化保存され、API リクエストの認証に限って OpenAI に送信されます。開発者がキーを受信または保存することはありません。</li>
-        <li><strong>ローカル設定とファイル。</strong>表示言語、音声の選択、生成した Markdown 会話要約は端末内だけに保存されます。Android の共有画面から明示的に共有した場合に限り、Markdown ファイルがアプリ外に送られます。</li>
+        <li><strong>ローカル設定とファイル。</strong>表示言語、音声とノイズ低減の選択、生成した Markdown 会話要約は端末内だけに保存されます。各 Android Auto 会話の終了後、選択したノイズ低減モード、セッションと VAD イベントの時刻、バイト数、チャンク間隔、RMS、ピーク、クリッピング率などの集計音声信号指標を含むローカル Markdown 診断レポートも作成されます。診断レポートには生の音声、文字起こし、API キー、ツール引数、モデルの応答は含まれません。Android の共有画面から明示的に共有した場合に限り、Markdown ファイルがアプリ外に送られます。</li>
         <li><strong>技術的なリクエストデータ。</strong>サービス提供者は、それぞれのポリシーに従い、IP アドレスやリクエストのメタデータなどのネットワーク情報を自動的に処理する場合があります。</li>
       </ul>
 
@@ -201,6 +203,7 @@
       <ul>
         <li><strong>OpenAI。</strong>リアルタイム音声応答とウェブ検索を提供します。OpenAI は、API 顧客がオプトインしない限り API データをモデルの学習に使用せず、顧客コンテンツを含む可能性のある不正利用監視ログを標準で最大 30 日間保持する場合があると説明しています。Road Voice は Responses API の保存を無効にして送信します。<a href="https://openai.com/policies/privacy-policy/">OpenAI プライバシーポリシー</a>および <a href="https://developers.openai.com/api/docs/guides/your-data">API データ管理</a>をご覧ください。</li>
         <li><strong>Open-Meteo。</strong>天気と地名の地理検索を提供します。無料 API のトラブルシューティング用ログには IP アドレスや地理座標が含まれることがあり、個別ログは 90 日後に削除すると説明しています。<a href="https://open-meteo.com/en/terms">Open-Meteo の利用規約とプライバシー</a>をご覧ください。</li>
+        <li><strong>Google Places。</strong>依頼された目的地検索と場所候補を提供します。<a href="https://policies.google.com/privacy">Google プライバシーポリシー</a>をご覧ください。</li>
         <li><strong>Google Play 開発者サービスと Android。</strong>端末の位置情報と OS 機能を提供します。<a href="https://policies.google.com/privacy">Google プライバシーポリシー</a>をご覧ください。</li>
       </ul>
 

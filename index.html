@@ -88,7 +88,7 @@
   <main>
     <header>
       <h1>Road Voice Privacy Policy</h1>
-      <p class="meta">Effective and last updated: August 12, 2026</p>
+      <p class="meta">Effective and last updated: October 1, 2026</p>
       <p class="intro">Road Voice is a voice assistant for Android and Android Auto. This policy explains what data the app processes, why it is needed, and the choices available to you.</p>
       <nav aria-label="Languages">
         <a href="#english">English</a>
@@ -111,6 +111,10 @@
         <li><strong>Local settings and artifacts.</strong> Interface language, voice and noise-reduction selections, and generated Markdown conversation summaries are stored locally on your device. During each phone or Android Auto voice session, Road Voice temporarily creates and incrementally updates a local Markdown diagnostic report containing the session origin, selected audio route and noise-reduction mode, stop source, session, VAD and barge-in event timing, and aggregate audio-signal measurements such as byte count, chunk interval, RMS, peak, and clipping rate. A diagnostic report does not contain raw audio, a transcript, an API key, tool arguments, model responses, or location. A Markdown file leaves the app only when you explicitly share it through Android's share interface.</li>
         <li><strong>Technical request data.</strong> Service providers may automatically process network information such as an IP address and request metadata under their own policies.</li>
       </ul>
+
+      <h3>Optional audio diagnostics in test builds</h3>
+      <p>Internal testing builds can record a short Android Auto audio diagnostic only when you manually enable recording for the next conversation in Settings. It is off by default, applies once, expires after 30 minutes and clears if the app process ends. Recording lasts at most 60 seconds and may contain your voice, the assistant's voice and surrounding sounds. It saves microphone audio before and after echo processing, playback/reference audio and frame timing locally to help investigate echo and unintended interruptions. Stopping the recording does not stop the conversation.</p>
+      <p>Up to five recordings are kept in app-private storage excluded from backup and device transfer. They are not automatically uploaded or added to public media. You can delete them or explicitly share a ZIP from the app; that file leaves the app only through your chosen share action. Deletion removes the app's recording and local export copy, but cannot remove copies already received by another app. Clearing app data or uninstalling also removes local recordings. These recordings are separate from the numeric-only Markdown diagnostic reports described above. Enabling recording adds no network destination; normal conversation audio still goes to OpenAI.</p>
 
       <h3>Why we process data</h3>
       <p>Data is processed only to provide the feature you request: realtime voice conversation, web search, weather, current location, connection testing, local preferences, and local Markdown artifacts. Road Voice has no developer-operated analytics, advertising, account, or cloud-storage service, and the developer does not sell your personal data.</p>
@@ -154,6 +158,10 @@
         <li><strong>技术请求数据。</strong>服务提供方可能根据其政策自动处理 IP 地址、请求元数据等网络信息。</li>
       </ul>
 
+      <h3>测试版中的可选音频诊断</h3>
+      <p>内部测试版只有在你通过 Settings 手动开启“录制下一次对话”后，才会保存一段 Android Auto 音频诊断。默认关闭，仅生效一次，30 分钟后失效，App 进程结束后也会清除待录制状态。每次最多录制 60 秒，可能包含你的声音、助手的声音和周围环境声音。本地保存回声处理前后的麦克风音频、播放／参考音频及帧时间，用于调查回声和误打断。录音停止不会结束对话。</p>
+      <p>最多保留五份录音，存放在 App 私有目录，不参与备份或设备迁移，也不会自动上传或加入公共媒体库。你可以在 App 中删除录音，或主动将 ZIP 分享给其他应用；只有你选择分享时，文件才会离开 App。删除会移除 App 内录音及本地导出副本，但无法删除其他应用已经收到的副本。清除 App 数据或卸载也会移除本地录音。这些录音与前述仅含统计信息的 Markdown 诊断报告分开保存。开启录音不会增加网络接收方；正常对话音频仍发送给 OpenAI。</p>
+
       <h3>处理目的</h3>
       <p>数据仅用于提供你请求的功能，包括实时语音对话、网页搜索、天气、当前位置、连接测试、本地偏好设置和本地 Markdown 文件。Road Voice 不使用开发者自建的分析、广告、账户或云存储服务；开发者不会出售你的个人数据。</p>
 
@@ -195,6 +203,10 @@
         <li><strong>ローカル設定とファイル。</strong>表示言語、音声とノイズ低減の選択、生成した Markdown 会話要約は端末内だけに保存されます。スマートフォンまたは Android Auto の各音声セッション中、Road Voice は一時的にローカル Markdown 診断レポートを作成して段階的に更新します。レポートにはセッションの開始元、選択した音声経路とノイズ低減モード、終了要因、セッション、VAD と割り込みイベントの時刻、バイト数、チャンク間隔、RMS、ピーク、クリッピング率などの集計音声信号指標が含まれます。診断レポートには生の音声、文字起こし、API キー、ツール引数、モデルの応答、位置情報は含まれません。Android の共有画面から明示的に共有した場合に限り、Markdown ファイルがアプリ外に送られます。</li>
         <li><strong>技術的なリクエストデータ。</strong>サービス提供者は、それぞれのポリシーに従い、IP アドレスやリクエストのメタデータなどのネットワーク情報を自動的に処理する場合があります。</li>
       </ul>
+
+      <h3>テスト版の任意の音声診断</h3>
+      <p>内部テスト版では、設定で次の会話の録音を手動で有効にした場合に限り、短い Android Auto 音声診断を保存できます。標準では無効で、1 回だけ有効になり、30 分後またはアプリのプロセス終了時に待機状態が解除されます。録音は最大 60 秒で、利用者やアシスタントの声、周囲の音が含まれる場合があります。エコー処理前後のマイク音声、再生／参照音声、フレームの時刻を端末内に保存し、エコーや誤割り込みの調査に使用します。録音が終了しても会話は続けられます。</p>
+      <p>録音は最大 5 件までアプリの非公開領域に保持し、バックアップや端末移行の対象にはせず、自動アップロードや公開メディアへの追加も行いません。アプリ内で削除するか、ZIP を明示的に他のアプリへ共有できます。ファイルがアプリ外へ送られるのは、利用者が共有を選んだ場合だけです。削除によりアプリ内の録音とローカルの書き出しコピーを除去しますが、他のアプリが既に受け取ったコピーは削除できません。アプリデータの消去やアンインストールでもローカル録音は除去されます。これらの録音は、前述の集計情報のみの Markdown 診断レポートとは別に保存されます。録音を有効にしても送信先は追加されず、通常の会話音声は引き続き OpenAI に送信されます。</p>
 
       <h3>利用目的</h3>
       <p>データは、リアルタイム音声会話、ウェブ検索、天気、現在地、接続テスト、ローカル設定、ローカル Markdown ファイルなど、利用者が要求した機能を提供するためだけに処理されます。Road Voice には開発者が運営する分析、広告、アカウント、クラウド保存サービスはなく、開発者が個人データを販売することはありません。</p>
